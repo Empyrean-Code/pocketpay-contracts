@@ -1,14 +1,11 @@
-# Task runner for common contract commands
-.PHONY: test build-wasm clean
+WASM_TARGET := wasm32-unknown-unknown
+WASM_PATH := target/$(WASM_TARGET)/release/savings_vault.wasm
 
-# Run all Rust tests
-test:
-	cargo test --workspace
+.PHONY: build-release wasm-size
 
-# Build the contract WASM in release mode
-build-wasm:
-	cargo build --target wasm32-unknown-unknown --release
+build-release:
+	cargo build --target $(WASM_TARGET) --release
+	sh scripts/report-wasm-size.sh "$(WASM_PATH)"
 
-# Clean build artifacts
-clean:
-	cargo clean
+wasm-size:
+	sh scripts/report-wasm-size.sh "$(WASM_PATH)"
