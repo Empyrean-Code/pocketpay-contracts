@@ -259,7 +259,7 @@ stellar-pocketpay-contracts/
 - Deployment help: see the [troubleshooting guide](docs/troubleshooting.md)
   for common Soroban CLI, Friendbot, WASM, network, and invocation issues.
 - Always test thoroughly on testnet before considering mainnet deployment.
-- Monitor contract storage TTL and extend as needed using `soroban contract extend`.
+- Monitor contract storage TTL and extend as needed using `soroban contract extend`. See the [Storage TTL Guide](docs/storage-ttl.md) for persistent vs. instance storage details and example commands.
 
 ---
 
