@@ -16,6 +16,7 @@
 //! builds with overflow-checks enabled, arithmetic overflow aborts the
 //! transaction. These tests document the observed behaviour and verify that
 //! failed operations do not corrupt balances.
+extern crate std;
 
 use super::test_helpers::*;
 use soroban_sdk::{testutils::Address as _, Address};
