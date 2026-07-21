@@ -6,6 +6,7 @@ mod balance_conservation;
 mod maximum_amount_boundary;
 mod test_helpers;
 mod initialization;
+mod unauthorized_access;
 
 use super::*;
 use soroban_sdk::{testutils::Address as _, Address};
